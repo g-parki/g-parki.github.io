@@ -14,3 +14,11 @@
 .project-preview {
   width: 90%;
 }
+
+.bokeh-logo {
+  width: 50%;
+}
+
+body {
+  padding-bottom: 75px;
+}
