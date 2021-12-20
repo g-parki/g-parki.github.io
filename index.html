@@ -45,7 +45,7 @@
                             <h6>Back End</h6>
                         </div>
                         <div class="col-6 text-start">
-                            <p>Flask<br>SQL<br>SQLAlchemy<br>Node.JS</p>
+                            <p>Flask<br>SQL<br>SQLAlchemy</p>
                         </div>
                     </div>
                     <div class="row">
@@ -95,13 +95,72 @@
         </div>
         <div id="projects" class="container vh-100 align-middle text-center pt-5">
             <div class="huge-text">Projects</div>
-            <p class="m-3">
-                My projects
-            </p>
+            <div class="container p-5">
+                <div class="row">
+                    <div class="col-md-6 p-2">
+                        <img class="project-preview" src="assets/img/sleep-tracker-demo.gif" alt="sleep tracker demo">
+                    </div>
+                    <div class="col-md-6 p-2 text-start">
+                        <h4>ML Baby Monitor Sleep Tracker</h4>
+                        <p><em>A machine learning web app to track our daughter's sleep routine.</em></p>
+                        <p>
+                            This is a full machine learning project from beginning to end. I first connected to the API for our Google Nest camera
+                            and collected thousands of training images and categorizeed them as "baby in crib" or "baby not in crib".<br>
+                            I then trained a neural network on this data. This was an interative process as
+                            I recognized various weaknesses in the neural network (e.g. shortcuts by recognizing lighting patterns), and would then collect additional data to improve the model.<br><br>
+                            The project was then bundled into a web app to provide:
+                            <ul>
+                                <li>Database for recording baby presence every 10 minutes</li>
+                                <li>Aggregation of data into "bedtimes"</li>
+                                <li>Live video feed, with live inference from the latest model</li>
+                                <li>Visualization of bedtimes for the week</li>
+                                <li>Meta-project information
+                                    <ul>
+                                        <li>UI for saving data from the live feed</li>
+                                        <li>A page for each model containing its hyperparameter info and a visualization of its accuracy.</li>
+                                        <li>A view of all data with ability to correct its value</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            Since this app was for private consumption (and due to privacy concerns), this is not deployed. Please see additional demos in the repository.
+                        </p>
+                        <p><a href="https://github.com/g-parki/Sleep-Schedule">Repository</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 p-2">
+                        <img class="project-preview" src="assets/img/popitdemo.gif" alt="pop it now demo">
+                    </div>
+                    <div class="col-md-6 p-2 text-start">
+                        <h4>Pop It. Now.</h4>
+                        <p><em>Browser game for popping bubble wrap.</em></p>
+                        <p>
+                            This is a simple game built with React to pop bubbles as fast as you can. The timer starts as soon as you start popping, and the app keeps track of
+                            your best time.
+                        </p>
+                        <p><a href="https://github.com/g-parki/PopItNow-React">Repository</a> or... <a href="https://g-parki.github.io/PopItNow-React/">play it now</a>!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 p-2">
+                        <img class="project-preview" src="assets/img/covidgraph.png" alt="cowlitz covid graph demo">
+                    </div>
+                    <div class="col-md-6 p-2 text-start">
+                        <h4>Cowlitz County COVID Tracking</h4>
+                        <p><em>Bot for gathering COVID data and tweeting daily graphs</em></p>
+                        <p>
+                            Early in the pandemic I grew frustrated with the lack of trended data available for Cowlitz County. So I wrote a script to scrape their website every day,
+                            normalize the data to account for reporting gaps, compute 7-day rolling averages, and tweet an updated graph of cases. <br>
+                            Official reporting is now improved, so this bot is no longer active.
+                        </p>
+                        <p><a href="https://github.com/g-parki/Cowlitz-COVID-Tracking">Repository</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
         <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-bottom">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">Greg Parkison</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggle" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
