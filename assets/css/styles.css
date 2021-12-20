@@ -7,8 +7,13 @@
   font-weight: 700;
 }
 
-.logo {
+.language-logo {
   height: 16px;
+}
+
+.social-logo {
+  height: 50px;
+  padding: 10px;
 }
 
 .project-preview {
