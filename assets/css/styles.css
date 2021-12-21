@@ -30,6 +30,7 @@ body {
 
 .code-button {
   border: 1px solid gray;
+  color: gray;
   border-radius: 5px;
   font-size: small;
   padding-right: 2px;
