@@ -27,3 +27,13 @@
 body {
   padding-bottom: 75px;
 }
+
+.code-button {
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: small;
+  padding-right: 2px;
+  padding-left: 2px;
+  height: 24px;
+  margin: 2px;
+}
