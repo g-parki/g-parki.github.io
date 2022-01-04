@@ -43,3 +43,13 @@ body {
   margin-top: 60px;
   margin-bottom: 90px;
 }
+
+#ip-locator-demo {
+  border: 2px solid rgb(0, 165, 138);
+  width: 60%;
+  border-radius: 20px;
+  padding: 25px 10px 10px 10px;
+  margin-left: auto; 
+  margin-right: auto;
+  text-align: left;
+}
