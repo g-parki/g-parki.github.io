@@ -1,15 +1,43 @@
 const render_ip = (ip_info) => {
+    const {latitude, longitude} = ip_info
     $('#ip-locator-demo')
         .append(render_line("Your IP", ip_info['ip']))
         .append(render_line("City", ip_info['city']))
         .append(render_line("ZIP", ip_info['zip']))
-        .append(render_line("Latitude", ip_info['latitude']))
-        .append(render_line("Longitude", ip_info['longitude']))
+        .append(render_line("Latitude", latitude))
+        .append(render_line("Longitude", longitude))
+    init_map(Number(latitude), Number(longitude))
 }
 
 const render_line = (title, data) => {
-    return '<p style="text-align:right">' +
-    `<span style="float:left"><b>${title}:</b></span>${data}</p>`
+    return '<p style="text-align:right;margin-top: 3px;margin-bottom: auto;">' +
+    `<span style="float:left;padding-right: 4px;"><b>${title}: </b></span>${data}</p>`
+}
+
+const init_map = (lat, lon) => {
+    const script = document.createElement('script');
+    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC8EGp1Go1VHdXdMf8J_1jZD4Hr9YC9ePw&callback=initMap';
+    script.async = true;
+
+    window.initMap = () => {
+        const coords = {lat: lat, lng: lon}
+        const map = new google.maps.Map(document.getElementById('map'), {
+            center: coords,
+            zoom: 12,
+            streetViewControl: false,
+            mapTypeControl: false,
+            fullscreenControl: false,
+            mapTypeId: "hybrid",
+          });
+        
+          new google.maps.Marker({
+            position: coords,
+            map,
+          });
+    };
+
+    document.head.appendChild(script);
+      
 }
 
 $(document).ready(function() {
